@@ -21,6 +21,7 @@ module Fog
         attribute :ebs_optimized,            :aliases => 'ebsOptimized'
         attribute :groups
         attribute :flavor_id,                :aliases => 'instanceType'
+        attribute :addressing_type
         attribute :hypervisor
         attribute :iam_instance_profile,     :aliases => 'iamInstanceProfile'
         attribute :image_id,                 :aliases => 'imageId'
@@ -151,6 +152,7 @@ module Fog
             'IamInstanceProfile.Arn'      => @iam_instance_profile_arn,
             'IamInstanceProfile.Name'     => @iam_instance_profile_name,
             'InstanceInitiatedShutdownBehavior' => instance_initiated_shutdown_behavior,
+            'AddressingType'              => addressing_type,
             'InstanceType'                => flavor_id,
             'KernelId'                    => kernel_id,
             'KeyName'                     => key_name,
